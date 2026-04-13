@@ -1,6 +1,8 @@
-# mcp_server.py — using standalone fastmcp package
+# Calculate_MCP_Server.py — using standalone fastmcp package
 # Install: pip install fastmcp
-# Run:     python mcp_server.py
+# Run:     python Calculate_MCP_Server.py
+# Test using agent_client.py in the same repo, which connects to this 
+# server and calls the tools.
 
 from fastmcp import FastMCP
 
