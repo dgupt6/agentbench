@@ -1,6 +1,7 @@
 # agent_client.py
 # Claude Agent SDK connecting to the HTTP MCP server above.
-#
+# This example demonstrates how to use the Claude Agent SDK to connect to an external MCP server over HTTP.
+# to Calculate_MCP_Server.py, which defines some simple math and weather tools. 
 # Install deps:
 #   pip install claude-agent-sdk
 #   Node.js 18+ must be installed (required by the bundled Claude Code CLI)
