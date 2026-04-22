@@ -1,0 +1,22 @@
+import asyncio
+from fastmcp import Client
+
+async def main():
+    # Connect to stdio server (launches 'server.py' as subprocess)
+    async with Client("server.py") as client:
+        # Initialize and list tools
+        tools = await client.list_tools()
+        print("Available tools:", [tool.name for tool in tools])
+        
+        # Call a tool (assuming server has an 'add' tool)
+        result = await client.call_tool("add", {"a": 5, "b": 7})
+        print("Tool result:", result.content[0].text if result.content else "No content")
+        
+        # List resources and prompts if available
+        resources = await client.list_resources()
+        prompts = await client.list_prompts()
+        print("Resources:", len(resources))
+        print("Prompts:", len(prompts))
+
+if __name__ == "__main__":
+    asyncio.run(main())
