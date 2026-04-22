@@ -1,0 +1,32 @@
+MCP 
+
+from fastmcp import Client
+from fastmcp.client.transports import StreamableHttpTransport, StdioTransport
+
+stdio_transport = StdioTransport(
+    command = "npx",
+    args=["-y", "@upstash/context7-mcp"]
+)
+http_transport = StreamableHttpTransport(
+    url="https://mcp.context7.com/mcp"
+)
+
+stdio_client = Client(stdio_transport)
+http_client = Client(http_transport)
+
+async with stdio_client as client:
+    # List of tools the server provides
+    tools = await client.list_tools()
+    # Call the tool with the given parameter(s)
+    response = await client.call_tool("resolve-library-id", {
+        "libraryName": "fastmcp"
+    })
+
+
+async with http_client as client:
+    # List of tools the server provides
+    tools = await client.list_tools()
+    # Call the tool with the given parameter(s)
+    response = await client.call_tool("resolve-library-id", {
+        "libraryName": "fastmcp"
+    })

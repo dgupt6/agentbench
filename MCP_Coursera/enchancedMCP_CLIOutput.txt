@@ -1,0 +1,57 @@
+Select from the Menu
+1. Generate Documentation
+2. Review Code
+3. Read File
+4. Read Current Directory
+5. Converse with Agent
+q. Quit
+> 5
+
+Entering conversation mode. Type 'quit' or 'q' to exit.
+
+Query: what is MCP resource
+
+MCP (Model Context Protocol) resources are a way to expose data and content to AI models in a structured, standardized way. Let me explain the key concepts:
+
+## What are MCP Resources?
+
+**Resources** in MCP are like "files" or "documents" that a server can expose to clients (like AI applications). They represent data that can be read and used as context by AI models.
+
+### Key Characteristics:
+
+1. **URI-based identification**: Each resource has a unique URI (like `file:///path/to/doc` or `custom://resource-id`)
+
+2. **Typed content**: Resources can contain:
+   - Text content (plain text, markdown, code, etc.)
+   - Binary content (images, PDFs, etc.)
+   - Structured data (JSON, etc.)
+
+3. **Read-only by default**: Resources are typically read operations, though they can be dynamic
+
+### Common Use Cases:
+
+- **File systems**: Exposing files and directories
+- **Databases**: Exposing database records or query results
+- **APIs**: Exposing data from external services
+- **Documentation**: Providing context about available tools or data
+- **Application state**: Sharing current state or configuration
+
+### How They Work:
+
+1. **Discovery**: Servers can list available resources via `resources/list`
+2. **Reading**: Clients fetch resource content via `resources/read`
+3. **Templates**: Resources can use URI templates for dynamic content (like `file:///{path}`)
+4. **Subscriptions**: Clients can subscribe to resource updates
+
+### Example Structure:
+
+```json
+{
+  "uri": "file:///project/README.md",
+  "name": "Project README",
+  "mimeType": "text/markdown",
+  "description": "Main project documentation"
+}
+```
+
+Resources are one of the three main primitives in MCP (along with **Tools** and **Prompts**), making it easy for AI models to access relevant context and data during conversations.

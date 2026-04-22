@@ -1,0 +1,24 @@
+Coursera courses :
+
+
+1) IBM RAG and Agentic AI Professional Certificate. ( 8 weeks time) /  9 course series
+
+https://www.coursera.org/professional-certificates/ibm-rag-and-agentic-ai
+
+Finish below : 
+================================================
+1.1 ) Build AI Agents using MCP course.
+
+https://www.coursera.org/learn/build-ai-agents-using-mcp/supplement/lMpDk/course-overview	
+
+1.2) Develop Generative AI Applications: Get Started
+
+https://www.coursera.org/learn/develop-generative-ai-applications-get-started
+
+1.3) Agentic AI with LangChain and LangGraph
+
+https://www.coursera.org/learn/agentic-ai-with-langchain-and-langgraph/home/module/1
+
+https://www.coursera.org/learn/agentic-ai-with-langchain-and-langgraph?specialization=ibm-rag-and-agentic-ai
+
+=================================================
